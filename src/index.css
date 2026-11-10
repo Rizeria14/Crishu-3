@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grain-opacity: 0.05;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: #FBF5EC;
+  color: #3B2E2A;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #C08890;
+  color: #FBF5EC;
+}
+
+/* subtle paper grain overlay used across sections */
+.paper-grain {
+  position: relative;
+  isolation: isolate;
+}
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* thin, warm scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F7EFE3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9A7AD;
+  border-radius: 999px;
+  border: 2px solid #F7EFE3;
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+.font-script {
+  font-family: 'Petit Formal Script', cursive;
+}
+
+/* soft ink underline used for delicate emphasis instead of bold/italic tricks */
+.ink-underline {
+  background-image: linear-gradient(transparent 65%, rgba(192,136,144,0.45) 0);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.paper-shadow {
+  box-shadow: 0 2px 6px rgba(59, 46, 42, 0.08), 0 18px 40px -12px rgba(59, 46, 42, 0.22);
+}
+
+.tape {
+  position: absolute;
+  width: 70px;
+  height: 26px;
+  background: rgba(241, 228, 211, 0.55);
+  border: 1px solid rgba(59, 46, 42, 0.06);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}

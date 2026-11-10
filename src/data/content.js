@@ -31,9 +31,9 @@ export const beginning = {
   lines: ["Before you,", "I didn't know a person could feel like home."],
   subtitle: "This is the story of how that changed.",
   photos: [
-    { src: "/public/images/her-1.jpeg", alt: "her, laughing at something off camera", rotate: -3 },
-    { src: "/public/images/her-2.jpeg", alt: "her, quiet morning light", rotate: 4 },
-    { src: "/public/images/her-3.jpeg", alt: "her, mid-sentence, mid-smile", rotate: -1 },
+    { src: "images/her-1.jpeg", alt: "her, laughing at something off camera", rotate: -3 },
+    { src: "images/her-2.jpeg", alt: "her, quiet morning light", rotate: 4 },
+    { src: "images/her-3.jpeg", alt: "her, mid-sentence, mid-smile", rotate: -1 },
   ],
 };
 
@@ -106,7 +106,7 @@ export const gardenFlowers = [
 export const filmFrames = [
   {
     id: "f1",
-    src: "/public/images/memory-1.jpeg",
+    src: "images/memory-1.jpeg",
     date: "",
     location: "",
     memory: "",
@@ -114,7 +114,7 @@ export const filmFrames = [
   },
   {
     id: "f2",
-    src: "/public/images/memory-2.jpeg",
+    src: "/images/memory-2.jpeg",
     date: "",
     location: "",
     memory: "",
@@ -122,7 +122,7 @@ export const filmFrames = [
   },
   {
     id: "f3",
-    src: "/public/images/memory-3.jpeg",
+    src: "/images/memory-3.jpeg",
     date: "",
     location: "",
     memory: "",
@@ -130,7 +130,7 @@ export const filmFrames = [
   },
   {
     id: "f4",
-    src: "/public/images/memory-4.jpeg",
+    src: "images/memory-4.jpeg",
     date: "",
     location: "",
     memory: "",
@@ -138,7 +138,7 @@ export const filmFrames = [
   },
   {
     id: "f5",
-    src: "/public/images/memory-5.jpeg",
+    src: "images/memory-5.jpeg",
     date: "",
     location: "",
     memory: "",
